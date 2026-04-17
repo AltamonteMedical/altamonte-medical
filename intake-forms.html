@@ -1,0 +1,88 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>New Patient Forms | Altamonte Medical Associates</title><link rel='stylesheet' href='styles.css'>
+<style>
+.mobile-menu{left:auto !important;right:12px !important;width:min(250px, calc(100vw - 24px)) !important;}
+.mobile-menu-panel{width:100% !important;margin-left:auto !important;border-radius:18px !important;overflow:hidden !important;}
+.mobile-menu-links a,.mobile-menu-links a:visited,.mobile-menu-links a:hover,.mobile-menu-links a:active,.mobile-menu-links a:focus{color:#123a38 !important;text-decoration:none !important;}
+.menu-toggle{margin-left:auto !important;}
+.btn.btn-primary,.btn.btn-primary:link,.btn.btn-primary:visited{color:#123a38 !important;}
+</style>
+
+</head><body class='forms-page'><div class='topbar'><div class='wrap brand'><div class='brand-left'><img src='logo.png' alt='Altamonte Medical Associates logo' class='site-logo'><div><div class='kicker'>Internal Medicine • Primary Care • Premiere Care</div><div class='name'>Altamonte Medical<br>Associates, P.A.
+</div></div></div><div class='line'></div><button class='menu-toggle' type='button' id='menuToggle' aria-label='Open menu' onclick='toggleMobileMenu()'>Menu</button></div></div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-links" >
+      <a href="index.html">Homepage</a>
+      <a href="internal-medicine-orlando.html">Internal Medicine</a>
+      <a href="primary-care-orlando.html">Primary Care</a>
+      <a href="premiere-care-orlando.html">Premiere Care</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#conditions">Conditions Treated</a>
+      <a href="index.html#physicians">Doctors' Bios</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="intake-forms.html">New Patient Forms</a>
+    </div>
+  </div>
+</div>
+
+<div class='wrap'>
+<section class='hero'><div class='hero-inner'><span class='eyebrow'>New Patient Forms</span><h1>Complete your intake packet before your visit.</h1><p>To ensure a seamless and personalized experience, we invite you to complete your intake prior to your visit. This allows our physicians to fully prepare and maximize your time. </p><div class='actions'><a class='btn btn-primary' href='digital-intake-packet.html' style='color:#123a38 !important;'>Open Digital Packet</a><a class='btn btn-secondary' href='index.html'>Return to Homepage</a><a class='btn btn-secondary' href='#support'>View Office Support</a></div></div></section><section class='section'><div class='grid'><div class='card'><h2>What’s included</h2><ul><li>Patient Information Form</li><li>Patient Data Sheet and Medical History</li><li>Family History and Current Lifestyle</li><li>Notice of Privacy Practices Acknowledgment</li><li>Authorization to discuss protected information</li><li>Authorization for release of medical information</li></ul><div class='actions'><a class='btn btn-primary' href='digital-intake-packet.html'>Start Forms</a></div></div><div class='card' id='support'><h2>Office support</h2><div class='meta'><span class='mini'>Alafaya Orlando Office</span><div>1864 N. Alafaya Trail, Suite B<br>Orlando, FL 32826<br>(407) 384-1414</div></div><div class='meta'><span class='mini'>Altamonte Springs Office</span><div>631 Palm Springs Drive, Suite 117<br>Altamonte Springs, FL 32701<br>(407) 339-5600</div></div></div></div></section></div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const topbar = document.querySelector('.topbar');
+  if(!topbar) return;
+  function onScroll(){
+    if(window.scrollY > 24){ topbar.classList.add('scrolled'); }
+    else { topbar.classList.remove('scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('menuToggle');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){ menu.classList.toggle('active'); });
+  }
+});
+</script>
+
+
+
+
+
+<script>
+function toggleMobileMenu(){
+  var menu = document.getElementById('mobileMenu');
+  if(menu){ menu.classList.toggle('active'); }
+}
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobileMenu');
+  var toggle = document.querySelector('.menu-toggle');
+  if(!menu || !toggle) return;
+  if(!menu.contains(e.target) && !toggle.contains(e.target)){
+    menu.classList.remove('active');
+  }
+});
+document.addEventListener('DOMContentLoaded', function(){
+  var menu = document.getElementById('mobileMenu');
+  if(!menu) return;
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){ menu.classList.remove('active'); });
+  });
+});
+</script>
+
+</body></html>
