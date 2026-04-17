@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altamonte Medical Associates, P.A.</title>
+  <meta name="description" content="Physician-led internal medicine, primary care, and premier care in Orlando and Altamonte Springs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="has-fixed-header ">
+<header class="site-header">
+  <nav aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo-wrap">
+          <div class="logo-fallback">AMA</div>
+        </div>
+        <div class="brand-copy">
+          <div class="brand-top">Internal Medicine • Primary Care • Executive Medicine</div>
+          <div class="brand-bottom">Altamonte Medical Associates, P.A.</div>
+        </div>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open site menu" aria-expanded="false" aria-controls="mobileSiteMenu" data-menu-button="mobileSiteMenu" onclick="toggleSiteMenu('mobileSiteMenu', this)">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Homepage</a>
+<a href="internal-medicine.html">Internal Medicine</a>
+<a href="primary-care.html" aria-current="page">Primary Care</a>
+<a href="premier-care.html">Premier Care</a>
+<a href="new-patient-forms.html">New Patient Forms</a>
+      </div>
+    </div>
+    <div class="mobile-site-menu" id="mobileSiteMenu">
+      <a href="index.html">Homepage</a>
+<a href="internal-medicine.html">Internal Medicine</a>
+<a href="primary-care.html" aria-current="page">Primary Care</a>
+<a href="premier-care.html">Premier Care</a>
+<a href="new-patient-forms.html">New Patient Forms</a>
+      <a href="digital-packet.html">Open Digital Packet</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div class="hero-left">
+        <div class="eyebrow">Primary Care</div>
+        <h1>Primary care focused on prevention, access, and long-term health.</h1>
+        <p class="hero-copy">Primary care at Altamonte Medical Associates emphasizes preventive care, annual physicals, chronic disease oversight, same-day availability when possible, and direct communication through the office.</p>
+        <div class="hero-actions">
+          <a class="btn btn-call-white" href="tel:14073841414" data-call-track="true" data-office="alafaya">Call Alafaya Orlando Office</a>
+          <a class="btn btn-call-white" href="tel:14073395600" data-call-track="true" data-office="altamonte">Call Altamonte Springs Office</a>
+        </div>
+        
+      <div class="forms-links-row">
+        <a class="boxed-link" href="primary-care.html">Learn More</a>
+        <a class="boxed-link " href="new-patient-forms.html">New Patient Forms</a>
+      </div>
+    
+        <div class="hero-points">
+          <div class='hero-point'>Annual physicals and preventive care</div>
+<div class='hero-point'>Chronic disease management</div>
+<div class='hero-point'>Thoughtful office-based care planning</div>
+<div class='hero-point'>Two office locations for convenience</div>
+        </div>
+      </div>
+      <div class="panel">
+        <span class="badge">Helpful Information</span>
+        <div class="mini-title">What to expect</div>
+        <div class="list">
+          <div class="detail">Call-only scheduling during office hours for privacy and accuracy.</div>
+          <div class="detail">New patients can complete paperwork before the visit using the digital packet.</div>
+          <div class="detail">Adult care offered from both Orlando and Altamonte Springs office locations.</div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© 2026 Altamonte Medical Associates, P.A. All rights reserved.</div>
+    <div>Internal Medicine • Primary Care • Executive Medicine • Call-Only Scheduling</div>
+  </div>
+</footer>
+
+<div class="floating-call-menu">
+  <button class="floating-call-toggle" type="button" onclick="toggleCallMenu()">Call Now</button>
+  <div class="floating-call-options" id="floatingCallOptions">
+    <a class="call-option" href="tel:14073841414" data-call-track="true" data-office="alafaya">
+      <span class="call-office-name">Call Alafaya Orlando Office</span>
+      <span class="call-office-number">(407) 384-1414</span>
+    </a>
+    <a class="call-option" href="tel:14073395600" data-call-track="true" data-office="altamonte">
+      <span class="call-office-name">Call Altamonte Springs Office</span>
+      <span class="call-office-number">(407) 339-5600</span>
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
