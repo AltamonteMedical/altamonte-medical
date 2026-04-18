@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Notice of Privacy Practices | Altamonte Medical Associates</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    .privacy-page-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+    .privacy-page-card {
+      background: #fffdf9;
+      border: 1px solid rgba(18,58,56,.10);
+      border-radius: 26px;
+      box-shadow: 0 16px 40px rgba(16,24,40,.08);
+      padding: 24px;
+    }
+    .privacy-header {
+      margin-bottom: 18px;
+    }
+    .privacy-kicker {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #f4efe5;
+      border: 1px solid #e2d8c4;
+      color: #9a7a2b;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .privacy-header h1 {
+      margin: 0 0 6px;
+      color: #123a38;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.05;
+    }
+    .privacy-subtitle {
+      margin: 0;
+      color: #365a58;
+      font-size: 18px;
+    }
+    .privacy-scroll-box {
+      max-height: 62vh;
+      overflow-y: auto;
+      padding: 18px 18px 8px;
+      border: 1px solid #d6dfda;
+      border-radius: 18px;
+      background: #ffffff;
+    }
+    .privacy-scroll-box h2 {
+      color: #123a38;
+      margin: 18px 0 8px;
+      font-size: 20px;
+    }
+    .privacy-scroll-box p, .privacy-scroll-box li {
+      color: #1f3130;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .privacy-scroll-box ul {
+      margin: 0 0 8px 20px;
+      padding: 0;
+    }
+    .privacy-effective {
+      margin-top: 18px;
+    }
+    .privacy-actions {
+      margin-top: 18px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      background: #123a38;
+      color: #ffffff;
+      border: 1px solid rgba(18,58,56,.10);
+      box-shadow: 0 10px 22px rgba(16,24,40,.08);
+    }
+    .cta-button:hover { background: #184744; }
+    @media (max-width: 760px) {
+      .privacy-page-shell { padding: 18px 14px 42px; }
+      .privacy-page-card { padding: 18px; border-radius: 22px; }
+      .privacy-scroll-box { max-height: 58vh; padding: 16px 14px 6px; }
+      .privacy-scroll-box p, .privacy-scroll-box li { font-size: 14px; }
+    }
+  </style>
+
+<style id="notice-header-match-fix">
+/* Make notice page header match the rest of the site */
+.topbar{
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 2000 !important;
+}
+.wrap.brand{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:16px !important;
+  padding:12px 18px !important;
+}
+.brand-left{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  min-width:0 !important;
+  flex:1 1 auto !important;
+}
+.site-logo{
+  width:64px !important;
+  height:64px !important;
+  object-fit:contain !important;
+  flex:0 0 64px !important;
+}
+.kicker{
+  font-size:11px !important;
+  letter-spacing:.12em !important;
+  line-height:1.2 !important;
+}
+.name{
+  font-size:32px !important;
+  line-height:.96 !important;
+  margin-top:4px !important;
+}
+#menuToggle,
+.menu-toggle{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:94px !important;
+  height:56px !important;
+  padding:0 18px !important;
+  border-radius:18px !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  background:#123a38 !important;
+  color:#fff !important;
+  font-size:18px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  box-shadow:0 10px 22px rgba(16,24,40,.08) !important;
+  cursor:pointer !important;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease !important;
+}
+#menuToggle:hover,
+.menu-toggle:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 10px 24px rgba(16,24,40,.10) !important;
+  background:#184744 !important;
+}
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+}
+.mobile-menu.open{
+  display:block !important;
+}
+.mobile-menu-panel{
+  width:100% !important;
+  margin-left:auto !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fffdf9 !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  box-shadow:0 18px 38px rgba(16,24,40,.14) !important;
+}
+.mobile-menu-links a{
+  display:block !important;
+  color:#123a38 !important;
+  text-decoration:none !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  background:#fffdf9 !important;
+  border-bottom:1px solid rgba(18,58,56,.07) !important;
+  padding:12px 14px !important;
+}
+.mobile-menu-links a:hover{
+  background:#f4efe5 !important;
+}
+@media (max-width:760px){
+  .wrap.brand{
+    padding:10px 14px !important;
+    gap:10px !important;
+  }
+  .brand-left{
+    gap:10px !important;
+  }
+  .site-logo{
+    width:56px !important;
+    height:56px !important;
+    flex:0 0 56px !important;
+  }
+  .kicker{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+    line-height:1.2 !important;
+  }
+  .name{
+    font-size:24px !important;
+    line-height:.95 !important;
+  }
+  #menuToggle,
+  .menu-toggle{
+    min-width:74px !important;
+    height:42px !important;
+    padding:0 12px !important;
+    border-radius:12px !important;
+    font-size:14px !important;
+  }
+  .mobile-menu{
+    top:72px !important;
+    right:10px !important;
+    width:min(238px, calc(100vw - 20px)) !important;
+  }
+}
+</style>
+
+
+<style id="notice-menu-position-fix">
+/* Match dropdown positioning to other site pages */
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  left:auto !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+  opacity:0 !important;
+  transform:translateY(-8px) !important;
+  pointer-events:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+}
+.mobile-menu.open{
+  display:block !important;
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+.mobile-menu-panel{
+  width:100% !important;
+  margin-left:auto !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fffdf9 !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  box-shadow:0 18px 38px rgba(16,24,40,.14) !important;
+}
+.mobile-menu-links a{
+  display:block !important;
+  color:#123a38 !important;
+  text-decoration:none !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  background:#fffdf9 !important;
+  border-bottom:1px solid rgba(18,58,56,.07) !important;
+  padding:12px 14px !important;
+}
+.mobile-menu-links a:hover{
+  background:#f4efe5 !important;
+}
+@media (max-width:760px){
+  .mobile-menu{
+    top:72px !important;
+    right:10px !important;
+    width:min(238px, calc(100vw - 20px)) !important;
+  }
+}
+</style>
+
+
+<style id="notice-menu-precise-alignment-fix">
+.mobile-menu-links a,
+.mobile-menu-links a:visited,
+.mobile-menu-links a:hover,
+.mobile-menu-links a:active,
+.mobile-menu-links a:focus{
+  display:block !important;
+  padding:12px 14px !important;
+  margin:0 !important;
+  text-align:left !important;
+  text-indent:0 !important;
+  color:#123a38 !important;
+  background:#fffdf9 !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  line-height:1.35 !important;
+  border-bottom:1px solid rgba(18,58,56,.07) !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+.mobile-menu-links a[href="intake-forms.html"]{
+  padding:12px 14px !important;
+  text-align:left !important;
+}
+</style>
+
+
+<style id="notice-menu-cta-fix">
+.mobile-menu-cta{
+  padding: 14px 14px 16px !important;
+  background:#fffdf9 !important;
+}
+.menu-call-btn{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  min-height:56px !important;
+  margin:0 0 12px 0 !important;
+  padding:0 18px !important;
+  border-radius:999px !important;
+  background:#0f5a54 !important;
+  color:#ffffff !important;
+  text-decoration:none !important;
+  font-size:16px !important;
+  font-weight:800 !important;
+  line-height:1.2 !important;
+  box-shadow:0 10px 22px rgba(16,24,40,.08) !important;
+}
+.menu-call-btn:last-child{
+  margin-bottom:0 !important;
+}
+.menu-call-btn:hover{
+  background:#146760 !important;
+}
+@media (max-width:760px){
+  .mobile-menu-cta{
+    padding: 14px 14px 16px !important;
+  }
+  .menu-call-btn{
+    min-height:52px !important;
+    font-size:14px !important;
+  }
+}
+</style>
+
+
+<style id="notice-menu-scroll-fix">
+.mobile-menu-panel {
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.mobile-menu-links {
+  max-height: none !important;
+}
+
+.mobile-menu-cta {
+  position: relative !important;
+  bottom: 0 !important;
+}
+</style>
+
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap brand">
+      <a href="index.html" class="brand-left" style="text-decoration:none;color:inherit;">
+        <img src="logo.png" alt="Altamonte Medical Associates logo" class="site-logo">
+        <div>
+          <div class="kicker">INTERNAL MEDICINE • PRIMARY CARE • PREMIERE CARE</div>
+          <div class="name">Altamonte Medical<br>Associates, P.A.</div>
+        </div>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" type="button">Menu</button>
+      <nav class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu-panel">
+    <div class="mobile-menu-links">
+      <a href="index.html">Homepage</a>
+<a href="internal-medicine-orlando.html">Internal Medicine</a>
+<a href="primary-care-orlando.html">Primary Care</a>
+<a href="premiere-care-orlando.html">Premiere Care</a>
+<a href="#services">Services</a>
+
+<a href="#conditions">Conditions Treated</a>
+<a href="#physicians">Meet the Doctors</a>
+<a href="#locations">Locations</a>
+<a href="#what-to-expect">What To Expect</a>
+<a href="intake-forms.html">New Patient Forms</a>
+<a href="#faq">Frequently Asked Questions</a>
+    <a href="notice-of-privacy.html">Notice of Privacy Practices</a></div>
+
+<div class="mobile-menu-cta">
+  <a href="tel:4073841414" class="menu-call-btn">Call Alafaya Orlando Office</a>
+  <a href="tel:4073395600" class="menu-call-btn">Call Altamonte Springs Office</a>
+</div>
+
+</nav>
+    </div>
+  </header>
+
+  
+<div class="privacy-page-shell">
+  <div class="privacy-page-card">
+    <div class="privacy-header">
+      <div class="privacy-kicker">NOTICE OF PRIVACY PRACTICES</div>
+      <h1>Notice of Privacy Practices</h1>
+      <p class="privacy-subtitle">Altamonte Medical Associates, P.A.</p>
+    </div>
+
+    <div class="privacy-scroll-box">
+      <p>
+        This Notice of Privacy Practices describes how your medical information may be used and disclosed and how you can access this information.
+        Altamonte Medical Associates, P.A. is committed to maintaining the confidentiality, integrity, and security of your protected health information
+        (PHI) in accordance with all applicable federal and state regulations, including the Health Insurance Portability and Accountability Act (HIPAA).
+      </p>
+
+      <h2>Uses and Disclosures of Your Information</h2>
+      <p>We may use and disclose your protected health information for treatment, payment, and healthcare operations.</p>
+      <p><strong>Treatment:</strong> Includes providing, coordinating, or managing your healthcare and related services, including consultation with other healthcare providers.</p>
+      <p><strong>Payment:</strong> Includes billing, claims management, and collection activities necessary to obtain reimbursement for services rendered.</p>
+      <p><strong>Healthcare Operations:</strong> Includes quality assessment, improvement activities, training programs, compliance efforts, credentialing, and administrative functions necessary to operate the practice efficiently.</p>
+
+      <h2>Telehealth Services</h2>
+      <p>
+        We may provide care through telehealth platforms, including synchronous video visits, asynchronous communication, secure messaging, and remote patient monitoring.
+        While we utilize HIPAA-compliant technologies whenever possible, electronic communication carries inherent risks. By participating in telehealth services,
+        you acknowledge and accept these risks.
+      </p>
+
+      <h2>Concierge and Enhanced Communication</h2>
+      <p>
+        As part of our personalized care model, patients may have access to enhanced communication methods including direct physician access via phone, secure messaging,
+        or email. While reasonable safeguards are implemented, these communication methods may introduce additional privacy considerations which you acknowledge and accept.
+      </p>
+
+      <h2>Other Permitted and Required Disclosures</h2>
+      <p>
+        We may disclose your protected health information when required by law, including for public health reporting, health oversight activities, law enforcement requests,
+        judicial proceedings, and to prevent or lessen serious threats to health or safety. We may also disclose information for workers’ compensation and other legally mandated purposes.
+      </p>
+
+      <h2>Your Rights</h2>
+      <ul>
+        <li>Access and obtain copies of your medical records</li>
+        <li>Request amendments or corrections</li>
+        <li>Request restrictions on certain uses and disclosures</li>
+        <li>Request confidential communications</li>
+        <li>Receive an accounting of disclosures</li>
+        <li>Obtain a copy of this notice at any time</li>
+      </ul>
+
+      <h2>Our Responsibilities</h2>
+      <p>
+        We are required by law to maintain the privacy and security of your protected health information, provide you with this notice, notify you in the event of a breach,
+        and abide by the terms currently in effect. We reserve the right to revise this notice and make updates applicable to all protected health information we maintain.
+      </p>
+
+      <h2>Contact Information</h2>
+      <p>
+        Altamonte Medical Associates, P.A.<br>
+        If you have questions or concerns regarding your privacy rights, you may contact our office directly.
+        You may also file a complaint with the U.S. Department of Health and Human Services. You will not be penalized for filing a complaint.
+      </p>
+
+      <p class="privacy-effective"><strong>Effective Date:</strong> April 18, 2026</p>
+    </div>
+
+    <div class="privacy-actions">
+      <a class="cta-button" href="Altamonte_HIPAA_FULLY_EXPANDED_FINAL_with_logo.pdf" download="Altamonte_HIPAA_Notice_of_Privacy_Practices.pdf">Download Printable PDF</a>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var btn = document.getElementById('menuToggle');
+      var menu = document.getElementById('mobileMenu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+      });
+      document.addEventListener('click', function(e){
+        if(!menu.contains(e.target) && !btn.contains(e.target)){
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
