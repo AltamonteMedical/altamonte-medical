@@ -1,0 +1,863 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Digital Intake Packet | Altamonte Medical Associates</title><link rel='stylesheet' href='styles.css'><script defer src='script.js'></script>
+
+<style id="restored-working-menu-style">
+.topbar{position:sticky;top:0;z-index:2000;}
+.brand{position:relative;}
+#menuToggle,
+.menu-toggle{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:94px !important;
+  height:56px !important;
+  margin-left:18px !important;
+  margin-right:6px !important;
+  padding:0 18px !important;
+  border-radius:18px !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  background:#123a38 !important;
+  color:#ffffff !important;
+  font-family:Arial,sans-serif !important;
+  font-size:18px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  box-shadow:0 10px 22px rgba(16,24,40,.08) !important;
+  cursor:pointer !important;
+  flex:0 0 auto !important;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease !important;
+  position:relative !important;
+  right:auto !important;
+  z-index:2101 !important;
+}
+#menuToggle:hover,
+.menu-toggle:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 10px 24px rgba(16,24,40,.10) !important;
+  background:#184744 !important;
+}
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  left:auto !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+  opacity:0 !important;
+  transform:translateY(-8px) !important;
+  pointer-events:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+}
+.mobile-menu.open{
+  display:block !important;
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+.mobile-menu-panel{
+  width:100% !important;
+  margin-left:auto !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fffdf9 !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  box-shadow:0 18px 38px rgba(16,24,40,.14) !important;
+}
+.mobile-menu-links a,
+.mobile-menu-links a:visited,
+.mobile-menu-links a:hover,
+.mobile-menu-links a:active,
+.mobile-menu-links a:focus{
+  display:block !important;
+  color:#123a38 !important;
+  text-decoration:none !important;
+  font-family:Arial,sans-serif !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  background:#fffdf9 !important;
+  border-bottom:1px solid rgba(18,58,56,.07) !important;
+  padding:12px 14px !important;
+}
+.mobile-menu-links a:hover{
+  background:#f4efe5 !important;
+}
+.mobile-menu-cta{
+  display:grid !important;
+  gap:8px !important;
+  padding:12px !important;
+  background:#fbf8f2 !important;
+}
+.call-dark{
+  background:#123a38 !important;
+  color:#fff !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px !important;}
+  #menuToggle,
+  .menu-toggle{
+    margin-right:0 !important;
+    min-width:88px !important;
+    height:52px !important;
+    font-size:17px !important;
+  }
+  .mobile-menu{
+    top:88px !important;
+    right:12px !important;
+    width:min(250px, calc(100vw - 24px)) !important;
+  }
+}
+</style>
+
+<style id="menu-open-visibility-fix">
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  left:auto !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+  opacity:0 !important;
+  transform:translateY(-8px) !important;
+  pointer-events:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+}
+.mobile-menu.open{
+  display:block !important;
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+@media (max-width:760px){
+  .mobile-menu{
+    top:88px !important;
+    right:12px !important;
+    width:min(250px, calc(100vw - 24px)) !important;
+  }
+}
+</style>
+
+<style id="mobile-header-size-fix">
+@media (max-width:760px){
+  .topbar{
+    position:sticky !important;
+    top:0 !important;
+    z-index:2000 !important;
+  }
+  .wrap{
+    padding:0 14px !important;
+  }
+  .brand{
+    gap:10px !important;
+    padding:12px 0 !important;
+    align-items:center !important;
+  }
+  .brand-left{
+    gap:10px !important;
+    min-width:0 !important;
+    flex:1 1 auto !important;
+    align-items:center !important;
+  }
+  .site-logo,
+  .logo,
+  .brand-left img{
+    width:56px !important;
+    height:56px !important;
+    max-width:56px !important;
+    max-height:56px !important;
+    flex:0 0 56px !important;
+  }
+  .kicker{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+    line-height:1.2 !important;
+  }
+  .name{
+    font-size:24px !important;
+    line-height:.95 !important;
+    margin-top:4px !important;
+  }
+  .line{
+    display:none !important;
+  }
+  #menuToggle,
+  .menu-toggle{
+    min-width:74px !important;
+    height:42px !important;
+    margin-left:8px !important;
+    margin-right:0 !important;
+    padding:0 12px !important;
+    font-size:14px !important;
+    border-radius:12px !important;
+    position:relative !important;
+    right:auto !important;
+    top:auto !important;
+    flex:0 0 auto !important;
+  }
+  .mobile-menu{
+    top:72px !important;
+    right:10px !important;
+    width:min(238px, calc(100vw - 20px)) !important;
+  }
+}
+</style>
+
+<style id="menu-mobile-nudge">
+@media (max-width:760px){
+  #menuToggle,
+  .menu-toggle{
+    margin-right:4px !important;
+    transform:translateX(-4px) !important;
+  }
+}
+</style>
+
+<style id="global-menu-nudge">
+#menuToggle,
+.menu-toggle{
+  transform:translateX(-6px) !important;
+}
+@media (max-width:760px){
+  #menuToggle,
+  .menu-toggle{
+    transform:translateX(-8px) !important;
+  }
+}
+</style>
+
+
+<style id="packet-
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas1" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas1" type="button">Clear Signature</button>
+  </div>
+</div>
+-upgrade">
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas2" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas2" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas-wrap{
+  margin-top:14px;
+  margin-bottom:18px;
+}
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas3" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas3" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas-label{
+  display:block;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas4" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas4" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas{
+  display:block;
+  width:100%;
+  max-width:760px;
+  height:190px;
+  border:2px solid #cfd8d4;
+  border-radius:14px;
+  background:#fff;
+  touch-action:none;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.03);
+}
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas5" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas5" type="button">Clear Signature</button>
+  </div>
+</div>
+-actions{
+  display:flex;
+  gap:10px;
+  margin-top:8px;
+  flex-wrap:wrap;
+}
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas6" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas6" type="button">Clear Signature</button>
+  </div>
+</div>
+-clear-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid rgba(18,58,56,.14);
+  background:#fffdf9;
+  color:#123a38;
+  font-weight:700;
+  cursor:pointer;
+}
+@media (max-width:760px){
+  .
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas7" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas7" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas{
+    max-width:100%;
+    height:220px;
+  }
+}
+</style>
+
+
+<style id="packet-
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas8" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas8" type="button">Clear Signature</button>
+  </div>
+</div>
+-real-upgrade">
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas9" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas9" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas-wrap{
+  margin-top:14px;
+  margin-bottom:20px;
+}
+.
+<div class="signature-canvas-wrap">
+  <label class="signature-canvas-label">signature:</label>
+  <canvas id="signatureCanvas10" class="signature-canvas"></canvas>
+  <div class="signature-actions">
+    <button class="signature-clear-btn" data-clear-for="signatureCanvas10" type="button">Clear Signature</button>
+  </div>
+</div>
+-canvas-label{
+  display:block;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.signature-canvas{
+  display:block;
+  width:100%;
+  max-width:760px;
+  height:220px;
+  border:2px solid #cfd8d4;
+  border-radius:14px;
+  background:#fff;
+  touch-action:none;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.03);
+}
+.signature-actions{
+  display:flex;
+  gap:10px;
+  margin-top:8px;
+  flex-wrap:wrap;
+}
+.signature-clear-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid rgba(18,58,56,.14);
+  background:#fffdf9;
+  color:#123a38;
+  font-weight:700;
+  cursor:pointer;
+}
+@media (max-width:760px){
+  .signature-canvas{
+    max-width:100%;
+    height:240px;
+  }
+}
+</style>
+
+
+<style id="actual-signature-pad-upgrade">
+.signature-pad-wrap{
+  margin-top:8px;
+  margin-bottom:18px;
+}
+.signature-pad-label{
+  display:block;
+  font-weight:700;
+  margin-bottom:8px;
+}
+.signature-pad{
+  display:block;
+  width:100%;
+  max-width:760px;
+  height:220px;
+  border:2px solid #cfd8d4;
+  border-radius:14px;
+  background:#fff;
+  touch-action:none;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.03);
+}
+.signature-pad-actions{
+  display:flex;
+  gap:10px;
+  margin-top:8px;
+  flex-wrap:wrap;
+}
+.signature-pad-clear{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid rgba(18,58,56,.14);
+  background:#fffdf9;
+  color:#123a38;
+  font-weight:700;
+  cursor:pointer;
+}
+@media (max-width:760px){
+  .signature-pad{
+    max-width:100%;
+    height:240px;
+  }
+}
+</style>
+
+
+<style id="final-clean-checkbox-alignment">
+fieldset .inline{
+  display:grid !important;
+  grid-template-columns:repeat(2, minmax(0, 1fr)) !important;
+  gap:18px 28px !important;
+  align-items:start !important;
+}
+fieldset .inline label{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:center !important;
+  gap:8px !important;
+  min-height:88px !important;
+  margin:0 !important;
+}
+fieldset .inline input[type='checkbox']{
+  width:22px !important;
+  height:22px !important;
+  margin:0 auto !important;
+  position:static !important;
+  display:block !important;
+}
+@media (max-width:760px){
+  fieldset .inline{
+    gap:16px 20px !important;
+  }
+  fieldset .inline label{
+    min-height:84px !important;
+  }
+}
+</style>
+
+</head><body class='digital-packet-page'><div class='topbar'><div class='wrap brand'><div class='brand-left'><img src='logo.png' alt='Altamonte Medical Associates logo' class='site-logo'><div><div class='kicker'>Internal Medicine • Primary Care • Premiere Care</div><div class='name'>Altamonte Medical<br>Associates, P.A.
+</div></div></div><div class='line'></div><button class='menu-toggle' type='button' id='menuToggle' aria-label='Open menu' aria-expanded='false' aria-expanded='false'>Menu</button></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-panel">
+    <div class="mobile-menu-links" >
+      <a href="index.html">Homepage</a>
+      <a href="internal-medicine-orlando.html">Internal Medicine</a>
+      <a href="primary-care-orlando.html">Primary Care</a>
+      <a href="premiere-care-orlando.html">Premiere Care</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#conditions">Conditions Treated</a>
+      <a href="index.html#physicians">Meet the Doctors</a>
+      <a href="index.html#locations">Locations</a>
+      <a href="intake-forms.html">New Patient Forms</a>
+    </div>
+    <div class="mobile-menu-cta">
+      <a href="tel:14073841414" class="call-dark">Call Alafaya Orlando Office</a>
+      <a href="tel:14073395600" class="call-dark">Call Altamonte Springs Office</a>
+    </div>
+  </div>
+</div>
+
+<div class='wrap'>
+<div class='nav'><a href='index.html'>Return to Homepage</a><a href='#section-1'>Patient Information</a><a href='#section-2'>History</a><a href='#section-3'>Family & Lifestyle</a><a href='#section-4'>Privacy</a><a href='#section-5'>Disclosure</a><a href='#section-6'>Records Release</a></div><form id='intakePacketForm'>
+<div class='form-card' id='section-1'><h2>1. Patient Information Form</h2><p class='form-sub'>.</p><div class='fieldgrid'><div class='field'><label>Date</label><input name='date_today' type='date'></div><div class='field'><label>Form Type</label><select name='form_type'><option></option><option>New Patient</option><option>Change of Information</option></select></div><div class='field'><label>Full Name</label><input name='full_name'></div><div class='field'><label>Date of Birth</label><input name='dob' type='date'></div><div class='field'><label>Address</label><input name='address1'></div><div class='field'><label>Address Line 2</label><input name='address2'></div><div class='field'><label>Social Security Number</label><input name='ssn'></div><div class='field'><label>Home Phone</label><input name='home_phone'></div><div class='field'><label>Cell Phone</label><input name='cell_phone'></div><div class='field'><label>Email</label><input name='email' type='email'></div><div class='field'><label>Gender</label><select name='gender'><option></option><option>Female</option><option>Male</option><option>Prefer not to say</option></select></div><div class='field'><label>Employer Name</label><input name='employer_name'></div><div class='field'><label>Employer Phone</label><input name='employer_phone'></div><div class='field'><label>Employer Address</label><input name='employer_address'></div><div class='field'><label>Insurance Name</label><input name='insurance_name'></div><div class='field'><label>Primary Claims Address</label><input name='primary_claims_address'></div><div class='field'><label>Primary Claims City / State / ZIP</label><input name='primary_claims_city_state_zip'></div><div class='field'><label>Primary Claims Telephone</label><input name='primary_claims_phone'></div><div class='field'><label>Primary Policy Number</label><input name='primary_policy_number'></div><div class='field'><label>Primary Group Number</label><input name='primary_group_number'></div><div class='field'><label>Secondary Claims Address</label><input name='secondary_claims_address'></div><div class='field'><label>Secondary Claims City / State / ZIP</label><input name='secondary_claims_city_state_zip'></div><div class='field'><label>Secondary Claims Telephone</label><input name='secondary_claims_phone'></div><div class='field'><label>Secondary Policy Number</label><input name='secondary_policy_number'></div><div class='field'><label>Secondary Group Number</label><input name='secondary_group_number'></div><div class='field'><label>Emergency Contact Name</label><input name='emergency_contact_name'></div><div class='field'><label>Emergency Contact Relationship</label><input name='emergency_contact_relationship'></div><div class='field'><label>Emergency Contact Phone</label><input name='emergency_contact_phone'></div></div></div>
+<div class='form-card' id='section-2'><h2>2. Patient Data Sheet & Medical History</h2><p class='form-sub'>.</p><div class='fieldgrid3'><div class='field'><label>Name</label><input name='history_name'></div><div class='field'><label>Date of Birth</label><input name='history_dob' type='date'></div><div class='field'><label>Sex</label><input name='sex'></div><div class='field'><label>Race</label><input name='race'></div><div class='field'><label>Marital Status</label><select name='marital_status'><option></option><option>Single</option><option>Married</option><option>Divorced</option><option>Widowed</option><option>Separated</option></select></div><div class='field'><label>Number of Children</label><input name='children_count'></div><div class='field'><label>Number of Persons in Household</label><input name='household_count'></div><div class='field'><label>Education / Grade</label><input name='education_grade'></div><div class='field'><label>Last Medical Exam</label><input name='last_medical_exam'></div><div class='field'><label>Last Eye Exam</label><input name='last_eye_exam'></div></div><fieldset><legend>Present Medical Conditions</legend><div class='inline'><label><input type='checkbox' name='conditions' value='High Blood Pressure'> High Blood Pressure</label><label><input type='checkbox' name='conditions' value='Diabetes'> Diabetes</label><label><input type='checkbox' name='conditions' value='Heart Disease'> Heart Disease</label><label><input type='checkbox' name='conditions' value='Lung Disease'> Lung Disease</label><label><input type='checkbox' name='conditions' value='Cancer'> Cancer</label><label><input type='checkbox' name='conditions' value='Depression'> Depression</label><label><input type='checkbox' name='conditions' value='Other'> Other</label></div></fieldset><div class='fieldgrid'><div class='field'><label>Past Illnesses / Hospitalizations / Surgeries</label><textarea name='past_illnesses'></textarea></div><div class='field'><label>Immunizations / Dates</label><textarea name='immunization_dates'></textarea></div><div class='field'><label>Drug / Food Allergies + Reaction</label><textarea name='allergies'></textarea></div><div class='field'><label>Current Medications / Vitamins / OTC / Strength / Frequency</label><textarea name='medications'></textarea></div></div></div>
+<div class='form-card' id='section-3'><h2>3. Family History & Current Lifestyle</h2><p class='form-sub'>.</p><div class='fieldgrid'><div class='field'><label>Father Medical History</label><textarea name='father_history'></textarea></div><div class='field'><label>Mother Medical History</label><textarea name='mother_history'></textarea></div><div class='field'><label>Brother(s) Medical History</label><textarea name='brothers_history'></textarea></div><div class='field'><label>Sister(s) Medical History</label><textarea name='sisters_history'></textarea></div><div class='field'><label>Children Medical History</label><textarea name='children_history'></textarea></div><div class='field'><label>Current Occupation</label><input name='occupation'></div><div class='field'><label>Chemical or Other Hazards on the Job</label><input name='job_hazards'></div><div class='field'><label>Do you drink alcohol? If yes, how much?</label><input name='alcohol_use'></div><div class='field'><label>Do you feel you have been exposed to AIDS?</label><select name='aids_exposure'><option></option><option>Yes</option><option>No</option></select></div><div class='field'><label>Do you smoke or chew tobacco? If yes, how much?</label><input name='tobacco_use'></div><div class='field'><label>Do you ever use illicit drugs? If yes, how much?</label><input name='illicit_drug_use'></div><div class='field'><label>Do you have any sexual concerns?</label><select name='sexual_concerns'><option></option><option>Yes</option><option>No</option></select></div><div class='field'><label>Hobbies / Recreational Activities</label><textarea name='hobbies'></textarea></div>
+<div class='field signature-pad-wrap'>
+  <label class='signature-pad-label'>Patient Signature Name</label>
+  <canvas id='signaturePad1' class='signature-pad'></canvas>
+  <input type='hidden' id='signaturePad1Data' name='lifestyle_signature'>
+  <div class='signature-pad-actions'>
+    <button type='button' class='signature-pad-clear' data-clear-for='signaturePad1' data-hidden-for='signaturePad1Data'>Clear Signature</button>
+  </div>
+</div>
+<div class='field'><label>Date</label><input name='lifestyle_signature_date' type='date'></div></div></div>
+<div class='form-card' id='section-4'><h2>4. Notice of Privacy Practices Acknowledgment</h2><p class='form-sub'>.</p><div class='notice'>By completing this section, the patient acknowledges the Notice of Privacy Practices and understands that protected health information may be used and disclosed for treatment, payment, and health care operations as described by the practice.</div><div class='fieldgrid'><div class='field'><label>Patient Name</label><input name='privacy_name'></div>
+<div class='field signature-pad-wrap'>
+  <label class='signature-pad-label'>Patient Signature</label>
+  <canvas id='signaturePad2' class='signature-pad'></canvas>
+  <input type='hidden' id='signaturePad2Data' name='privacy_signature'>
+  <div class='signature-pad-actions'>
+    <button type='button' class='signature-pad-clear' data-clear-for='signaturePad2' data-hidden-for='signaturePad2Data'>Clear Signature</button>
+  </div>
+</div>
+<div class='field'><label>Date</label><input name='privacy_date' type='date'></div></div></div>
+<div class='form-card' id='section-5'><h2>5. Authorization to Discuss / Disclose Information</h2><p class='form-sub'>.</p><div class='fieldgrid3'><div class='field'><label>Date</label><input name='auth_date' type='date'></div><div class='field'><label>Name</label><input name='auth_name'></div><div class='field'><label>SS#</label><input name='auth_ssn'></div></div><div class='fieldgrid'><div class='field'><label>Person 1 Name</label><input name='authorized_person_1'></div><div class='field'><label>Person 1 Relationship</label><input name='authorized_person_1_relation'></div><div class='field'><label>Person 2 Name</label><input name='authorized_person_2'></div><div class='field'><label>Person 2 Relationship</label><input name='authorized_person_2_relation'></div><div class='field'><label>Person 3 Name</label><input name='authorized_person_3'></div><div class='field'><label>Person 3 Relationship</label><input name='authorized_person_3_relation'></div>
+<div class='field signature-pad-wrap'>
+  <label class='signature-pad-label'>Patient Signature Name</label>
+  <canvas id='signaturePad3' class='signature-pad'></canvas>
+  <input type='hidden' id='signaturePad3Data' name='authorized_signature'>
+  <div class='signature-pad-actions'>
+    <button type='button' class='signature-pad-clear' data-clear-for='signaturePad3' data-hidden-for='signaturePad3Data'>Clear Signature</button>
+  </div>
+</div>
+<div class='field'><label>Date</label><input name='authorized_signature_date' type='date'></div></div></div>
+<div class='form-card' id='section-6'><h2>6. Authorization for Release of Medical Information</h2><p class='form-sub'>.</p><div class='fieldgrid3'><div class='field'><label>Date of Birth</label><input name='release_dob' type='date'></div><div class='field'><label>Social Security Number</label><input name='release_ssn'></div><div class='field'><label>Patient Name</label><input name='release_patient_name'></div></div><fieldset><legend>Authorization Type</legend><div class='inline'><label><input type='checkbox' name='release_type' value='Release to'> Release to</label><label><input type='checkbox' name='release_type' value='Obtain from'> Obtain from</label><label><input type='checkbox' name='release_type' value='Discuss with'> Discuss with</label></div></fieldset><div class='fieldgrid'><div class='field'><label>Parent/Guardian/POA Name</label><input name='release_party_name'></div><div class='field'><label>Address</label><input name='release_party_address'></div><div class='field'><label>City</label><input name='release_party_city'></div><div class='field'><label>State</label><input name='release_party_state'></div><div class='field'><label>ZIP</label><input name='release_party_zip'></div><div class='field'><label>Exceptions / Notes</label><textarea name='release_exceptions'></textarea></div>
+<div class='field signature-pad-wrap'>
+  <label class='signature-pad-label'>Patient Signature</label>
+  <canvas id='signaturePad4' class='signature-pad'></canvas>
+  <input type='hidden' id='signaturePad4Data' name='release_patient_signature'>
+  <div class='signature-pad-actions'>
+    <button type='button' class='signature-pad-clear' data-clear-for='signaturePad4' data-hidden-for='signaturePad4Data'>Clear Signature</button>
+  </div>
+</div>
+
+<div class='field signature-pad-wrap'>
+  <label class='signature-pad-label'>Parent/Guardian/POA Signature</label>
+  <canvas id='signaturePad5' class='signature-pad'></canvas>
+  <input type='hidden' id='signaturePad5Data' name='release_guardian_signature'>
+  <div class='signature-pad-actions'>
+    <button type='button' class='signature-pad-clear' data-clear-for='signaturePad5' data-hidden-for='signaturePad5Data'>Clear Signature</button>
+  </div>
+</div>
+
+
+<div class='field'><label>Parent / Guardian / POA Name</label><input name='release_guardian_name'></div><div class='field'><label>Relationship</label><input name='release_guardian_relationship'></div><div class='field'><label>Guardian / POA Date</label><input name='release_guardian_date' type='date'></div></div></div>
+<div class='form-card'><h2>Save, Print, or Download</h2><div class='print-actions'><button type='button' onclick='savePacket()'>Save Progress</button><button type='button' onclick='downloadJSON()'>Download Responses</button><button type='button' class='alt' onclick='printPacket()'>Print Packet</button><a class='btn btn-primary' href='index.html' style='text-decoration:none;'>Return to Homepage</a></div></div></form></div>
+
+<script id="menu-behavior-restore">
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('menuToggle');
+  var menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+
+  // ensure clean baseline
+  menu.classList.remove('open');
+  btn.setAttribute('aria-expanded', 'false');
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
+  }, true);
+
+  document.addEventListener('click', function(e){
+    if(!menu.contains(e.target) && !btn.contains(e.target)){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  }, true);
+
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  });
+});
+</script>
+
+
+<script id="packet-signature-script">
+(function(){
+  function setupSignatureCanvas(canvas){
+    if(!canvas) return;
+
+    function sizeCanvas(){
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(rect.width * ratio);
+      canvas.height = Math.floor(rect.height * ratio);
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.lineWidth = 2.2;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#123a38';
+      return ctx;
+    }
+
+    let ctx = sizeCanvas();
+    let drawing = false;
+
+    function pointFromEvent(e){
+      const r = canvas.getBoundingClientRect();
+      if (e.touches && e.touches.length){
+        return {x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top};
+      }
+      if (e.changedTouches && e.changedTouches.length){
+        return {x: e.changedTouches[0].clientX - r.left, y: e.changedTouches[0].clientY - r.top};
+      }
+      return {x: e.clientX - r.left, y: e.clientY - r.top};
+    }
+
+    function start(e){
+      e.preventDefault();
+      drawing = true;
+      const p = pointFromEvent(e);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+    }
+    function move(e){
+      if(!drawing) return;
+      e.preventDefault();
+      const p = pointFromEvent(e);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+    function end(e){
+      if(!drawing) return;
+      e.preventDefault();
+      drawing = false;
+    }
+
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', move);
+    canvas.addEventListener('mouseup', end);
+    canvas.addEventListener('mouseleave', end);
+
+    canvas.addEventListener('touchstart', start, {passive:false});
+    canvas.addEventListener('touchmove', move, {passive:false});
+    canvas.addEventListener('touchend', end, {passive:false});
+    canvas.addEventListener('touchcancel', end, {passive:false});
+
+    const clearBtn = document.querySelector('[data-clear-for="' + canvas.id + '"]');
+    if(clearBtn){
+      clearBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+      });
+    }
+
+    window.addEventListener('resize', function(){
+      const old = canvas.toDataURL();
+      ctx = sizeCanvas();
+      const img = new Image();
+      img.onload = function(){
+        const rect = canvas.getBoundingClientRect();
+        ctx.drawImage(img, 0, 0, rect.width, rect.height);
+      };
+      img.src = old;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.signature-canvas').forEach(setupSignatureCanvas);
+  });
+})();
+</script>
+
+
+<script id="packet-signature-real-script">
+(function(){
+  function setupSignatureCanvas(canvas){
+    if(!canvas) return;
+
+    function sizeCanvas(){
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(rect.width * ratio);
+      canvas.height = Math.floor(rect.height * ratio);
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#123a38';
+      return ctx;
+    }
+
+    let ctx = sizeCanvas();
+    let drawing = false;
+
+    function pointFromEvent(e){
+      const r = canvas.getBoundingClientRect();
+      if (e.touches && e.touches.length){
+        return {x: e.touches[0].clientX - r.left, y: e.touches[0].clientY - r.top};
+      }
+      if (e.changedTouches && e.changedTouches.length){
+        return {x: e.changedTouches[0].clientX - r.left, y: e.changedTouches[0].clientY - r.top};
+      }
+      return {x: e.clientX - r.left, y: e.clientY - r.top};
+    }
+
+    function start(e){
+      e.preventDefault();
+      drawing = true;
+      const p = pointFromEvent(e);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+    }
+    function move(e){
+      if(!drawing) return;
+      e.preventDefault();
+      const p = pointFromEvent(e);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+    function end(e){
+      if(!drawing) return;
+      e.preventDefault();
+      drawing = false;
+    }
+
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', move);
+    canvas.addEventListener('mouseup', end);
+    canvas.addEventListener('mouseleave', end);
+
+    canvas.addEventListener('touchstart', start, {passive:false});
+    canvas.addEventListener('touchmove', move, {passive:false});
+    canvas.addEventListener('touchend', end, {passive:false});
+    canvas.addEventListener('touchcancel', end, {passive:false});
+
+    const clearBtn = document.querySelector('[data-clear-for="' + canvas.id + '"]');
+    if(clearBtn){
+      clearBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.signature-canvas').forEach(setupSignatureCanvas);
+  });
+})();
+</script>
+
+
+<script id="actual-signature-pad-script">
+(function(){
+  function initPad(canvas){
+    if(!canvas) return;
+    const hidden = document.getElementById(canvas.id + 'Data');
+    function sizeCanvas(){
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = Math.floor(rect.width * ratio);
+      canvas.height = Math.floor(rect.height * ratio);
+      const ctx = canvas.getContext('2d');
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.lineWidth = 2.4;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#123a38';
+      return ctx;
+    }
+    let ctx = sizeCanvas();
+    let drawing = false;
+
+    function point(e){
+      const r = canvas.getBoundingClientRect();
+      if(e.touches && e.touches.length){
+        return {x:e.touches[0].clientX-r.left, y:e.touches[0].clientY-r.top};
+      }
+      if(e.changedTouches && e.changedTouches.length){
+        return {x:e.changedTouches[0].clientX-r.left, y:e.changedTouches[0].clientY-r.top};
+      }
+      return {x:e.clientX-r.left, y:e.clientY-r.top};
+    }
+    function save(){
+      if(hidden){ hidden.value = canvas.toDataURL('image/png'); }
+    }
+    function start(e){
+      e.preventDefault();
+      drawing = true;
+      const p = point(e);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+    }
+    function move(e){
+      if(!drawing) return;
+      e.preventDefault();
+      const p = point(e);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+      save();
+    }
+    function end(e){
+      if(!drawing) return;
+      e.preventDefault();
+      drawing = false;
+      save();
+    }
+
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', move);
+    canvas.addEventListener('mouseup', end);
+    canvas.addEventListener('mouseleave', end);
+    canvas.addEventListener('touchstart', start, {passive:false});
+    canvas.addEventListener('touchmove', move, {passive:false});
+    canvas.addEventListener('touchend', end, {passive:false});
+    canvas.addEventListener('touchcancel', end, {passive:false});
+
+    const clearBtn = document.querySelector("[data-clear-for='" + canvas.id + "']");
+    if(clearBtn){
+      clearBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        ctx.clearRect(0, 0, rect.width, rect.height);
+        if(hidden){ hidden.value = ''; }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.signature-pad').forEach(initPad);
+  });
+})();
+</script>
+
+</body></html>
