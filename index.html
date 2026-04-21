@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=yes">
   <title>Altamonte Medical Associates | Internal Medicine & Primary Care Orlando</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -4432,6 +4434,49 @@ Altamonte Springs, Florida 32701</div>
   margin-top:2px;
 }
 
+ /* FIX: iPhone Safari phone/fax visibility */
+.meta-row,
+.meta-row strong,
+.meta-row span,
+.meta-row a,
+.fax-row,
+.fax-link,
+.fax-enhanced,
+.fax-bottom {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  text-shadow: none !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+
+.meta-row {
+  color: #1f2937 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.meta-row strong {
+  color: #123a38 !important;
+  font-weight: 700 !important;
+}
+
+.fax-row,
+.fax-link,
+.fax-enhanced {
+  color: #475467 !important;
+  font-weight: 500 !important;
+}
+
+/* Prevent Safari fading */
+a[href^="tel:"],
+a[href^="fax:"] {
+  color: inherit !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: currentColor !important;
+  text-decoration: none !important;
+} 
 </style>
 
 <script>
