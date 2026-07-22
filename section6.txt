@@ -1,0 +1,141 @@
+</div>
+<div class="field hipaa-ack">
+<label><input name="privacy_notice_ack" required="" type="checkbox"/> I acknowledge that I have read and understand the Notice of Privacy Practices.</label>
+</div>
+</div>
+<div class="fieldgrid"><div class="field"><label>Patient Name</label><input name="privacy_name"/></div>
+<div class="field signature-pad-wrap">
+<label class="signature-pad-label">Patient Signature</label>
+<canvas class="signature-pad" id="signaturePad2"></canvas>
+<input id="signaturePad2Data" name="privacy_signature" type="hidden"/>
+<div class="signature-pad-actions">
+<button class="signature-pad-clear" data-clear-for="signaturePad2" data-hidden-for="signaturePad2Data" type="button">Clear Signature</button>
+</div>
+</div>
+<div class="field"><label>Date</label><input name="privacy_date" type="date"/></div></div></div>
+<div class="form-card" id="section-5"><h2>5. Authorization to Discuss / Disclose Information</h2><p class="form-sub">.</p><div class="fieldgrid3"><div class="field"><label>Date</label><input name="auth_date" type="date"/></div><div class="field"><label>Name</label><input name="auth_name"/></div><div class="field"><label>SS#</label><input name="auth_ssn"/></div></div><div class="fieldgrid"><div class="field"><label>Person 1 Name</label><input name="authorized_person_1"/></div><div class="field"><label>Person 1 Relationship</label><input name="authorized_person_1_relation"/></div><div class="field"><label>Person 2 Name</label><input name="authorized_person_2"/></div><div class="field"><label>Person 2 Relationship</label><input name="authorized_person_2_relation"/></div><div class="field"><label>Person 3 Name</label><input name="authorized_person_3"/></div><div class="field"><label>Person 3 Relationship</label><input name="authorized_person_3_relation"/></div>
+<div class="field"><label>Patient Name</label><input name="section5_patient_name"/></div>
+<div class="field signature-pad-wrap">
+<label class="signature-pad-label">Patient Signature</label>
+<canvas class="signature-pad" id="signaturePad3"></canvas>
+<input id="signaturePad3Data" name="authorized_signature" type="hidden"/>
+<div class="signature-pad-actions">
+<button class="signature-pad-clear" data-clear-for="signaturePad3" data-hidden-for="signaturePad3Data" type="button">Clear Signature</button>
+</div>
+</div>
+<div class="field"><label>Date</label><input name="authorized_signature_date" type="date"/></div></div></div>
+<div class="form-card" id="section-6">
+<h2>6. Authorization for Release of Medical Information</h2>
+<p class="form-sub">Complete this optional section when you want Altamonte Medical Associates to release records, obtain records, or discuss health information with another person or organization.</p>
+<div class="actions" style="margin-bottom:18px;"><a class="btn" href="Altamonte_Authorization_for_Release_of_Medical_Information.pdf" rel="noopener" target="_blank" style="background:#123a38!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff;border:1px solid #123a38;">Download Fillable Records Release Form</a></div>
+
+<fieldset><legend>Patient Information</legend>
+<div class="fieldgrid3">
+  <div class="field"><label>Patient Full Legal Name</label><input name="release_patient_name"/></div>
+  <div class="field"><label>Date of Birth</label><input name="release_dob" type="date"/></div>
+  <div class="field"><label>Phone Number</label><input name="release_phone" type="tel"/></div>
+  <div class="field"><label>Patient ID / MRN (optional)</label><input name="release_mrn"/></div>
+  <div class="field" style="grid-column:span 2;"><label>Email Address (optional)</label><input name="release_email" type="email"/></div>
+</div>
+<div class="fieldgrid">
+  <div class="field"><label>Street Address</label><input name="release_patient_address"/></div>
+  <div class="field"><label>City, State, ZIP</label><input name="release_patient_city_state_zip"/></div>
+</div>
+</fieldset>
+
+<fieldset><legend>Authorization Direction - check all that apply</legend>
+<div class="inline" style="display:grid;gap:10px;">
+  <label><input name="release_direction" type="checkbox" value="Release records from Altamonte Medical Associates"/> Release records <strong>from Altamonte Medical Associates</strong> to the recipient below</label>
+  <label><input name="release_direction" type="checkbox" value="Obtain records for Altamonte Medical Associates"/> Obtain records <strong>from the provider below</strong> for Altamonte Medical Associates</label>
+  <label><input name="release_direction" type="checkbox" value="Discuss information"/> Discuss my health information with the person or organization below</label>
+</div>
+</fieldset>
+
+<fieldset><legend>Other Person or Organization</legend>
+<div class="fieldgrid">
+  <div class="field"><label>Person / Organization Name</label><input name="release_party_name"/></div>
+  <div class="field"><label>Contact Person / Department</label><input name="release_party_contact"/></div>
+  <div class="field"><label>Phone</label><input name="release_party_phone" type="tel"/></div>
+  <div class="field"><label>Fax</label><input name="release_party_fax" type="tel"/></div>
+  <div class="field"><label>Secure Email (if applicable)</label><input name="release_party_email" type="email"/></div>
+  <div class="field"><label>Mailing Address, City, State, ZIP</label><input name="release_party_address"/></div>
+</div>
+</fieldset>
+
+<fieldset><legend>Information Authorized</legend>
+<div class="fieldgrid3">
+  <div class="field"><label>Records From</label><input name="release_records_from" type="date"/></div>
+  <div class="field"><label>Records Through</label><input name="release_records_through" type="date"/></div>
+  <div class="field"><label><input name="release_records" type="checkbox" value="Entire medical record"/> Entire Medical Record</label></div>
+</div>
+<div class="inline" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;">
+  <label><input name="release_records" type="checkbox" value="Office or progress notes"/> Office / progress notes</label>
+  <label><input name="release_records" type="checkbox" value="Problem medication allergy lists"/> Problem, medication, and allergy lists</label>
+  <label><input name="release_records" type="checkbox" value="Laboratory and pathology"/> Laboratory and pathology reports</label>
+  <label><input name="release_records" type="checkbox" value="Imaging reports"/> Imaging reports</label>
+  <label><input name="release_records" type="checkbox" value="Immunization records"/> Immunization records</label>
+  <label><input name="release_records" type="checkbox" value="Referral consultation reports"/> Referral / consultation reports</label>
+  <label><input name="release_records" type="checkbox" value="Billing records"/> Billing records</label>
+  <label><input name="release_records" type="checkbox" value="Other"/> Other</label>
+</div>
+<div class="field"><label>Other Records / Specific Limitations</label><textarea name="release_records_other"></textarea></div>
+</fieldset>
+
+<fieldset><legend>Specially Protected Information - include only when specifically authorized</legend>
+<p style="margin-top:0;">Check each category you authorize and enter your initials. Unchecked categories will not be released unless disclosure is otherwise permitted or required by law.</p>
+<div class="fieldgrid">
+  <div class="field"><label><input name="release_special" type="checkbox" value="Mental or behavioral health"/> Mental / Behavioral Health Records</label><input name="release_initials_mental" placeholder="Initials"/></div>
+  <div class="field"><label><input name="release_special" type="checkbox" value="HIV or AIDS"/> HIV / AIDS Test Results or Treatment</label><input name="release_initials_hiv" placeholder="Initials"/></div>
+  <div class="field"><label><input name="release_special" type="checkbox" value="Genetic information"/> Genetic Test Results or Related Treatment</label><input name="release_initials_genetic" placeholder="Initials"/></div>
+  <div class="field"><label><input name="release_special" type="checkbox" value="Substance use disorder treatment"/> Substance Use Disorder Treatment Records</label><input name="release_initials_sud" placeholder="Initials"/></div>
+</div>
+</fieldset>
+
+<fieldset><legend>Purpose, Delivery, and Expiration</legend>
+<div class="inline" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">
+  <label><input name="release_purpose" type="checkbox" value="Continuity of care"/> Continuity of Care / Treatment</label>
+  <label><input name="release_purpose" type="checkbox" value="Personal use"/> Personal Use</label>
+  <label><input name="release_purpose" type="checkbox" value="Insurance disability legal"/> Insurance / Disability / Legal</label>
+  <label><input name="release_purpose" type="checkbox" value="Other"/> Other</label>
+</div>
+<div class="field"><label>Other Purpose or Additional Instructions</label><input name="release_purpose_other"/></div>
+<div class="inline" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px;">
+  <label><input name="release_delivery" type="checkbox" value="Secure electronic"/> Secure Electronic</label>
+  <label><input name="release_delivery" type="checkbox" value="Fax"/> Fax</label>
+  <label><input name="release_delivery" type="checkbox" value="Mail"/> Mail</label>
+  <label><input name="release_delivery" type="checkbox" value="Patient pickup"/> Patient Pickup</label>
+  <label><input name="release_delivery" type="checkbox" value="Other"/> Other</label>
+</div>
+<div class="field"><label>Delivery Details / Secure Email / Fax / Other Instructions</label><textarea name="release_delivery_details"></textarea></div>
+<div class="fieldgrid">
+  <div class="field"><label>Expiration Date</label><input name="release_expiration_date" type="date"/></div>
+  <div class="field"><label>OR Expiration Event (example: completion of this request)</label><input name="release_expiration_event"/></div>
+</div>
+</fieldset>
+
+<div class="notice" style="line-height:1.6;">
+<p><strong>Voluntary:</strong> Signing this authorization is voluntary. Altamonte Medical Associates generally will not condition treatment, payment, enrollment, or eligibility for benefits on signing, except as permitted by law.</p>
+<p><strong>Revocation:</strong> I may revoke this authorization in writing at any time. Revocation will not affect information already used or disclosed in reliance on this authorization.</p>
+<p><strong>Redisclosure:</strong> Information disclosed may be redisclosed by the recipient and may no longer be protected by HIPAA, although other privacy laws may apply.</p>
+<p><strong>Understanding:</strong> I understand the information, purpose, recipient, and expiration stated here. I may request a copy. A photocopy or electronic copy is as valid as the original.</p>
+</div>
+
+<div class="fieldgrid3">
+  <div class="field" style="grid-column:span 2;"><label>Patient or Authorized Representative - Printed Name</label><input name="release_signer_name"/></div>
+  <div class="field"><label>Date</label><input name="release_signature_date" type="date"/></div>
+  <div class="field"><label>Time (optional)</label><input name="release_signature_time" type="time"/></div>
+  <div class="field"><label>Relationship / Legal Authority (if applicable)</label><input name="release_representative_relationship"/></div>
+  <div class="field"><label>Description of Representative Authority (if applicable)</label><input name="release_representative_authority"/></div>
+</div>
+<div class="field signature-pad-wrap">
+  <label class="signature-pad-label">Patient / Authorized Representative Signature</label>
+  <canvas class="signature-pad" id="signaturePad4"></canvas>
+  <input id="signaturePad4Data" name="release_patient_signature" type="hidden"/>
+  <div class="signature-pad-actions"><button class="signature-pad-clear" data-clear-for="signaturePad4" data-hidden-for="signaturePad4Data" type="button">Clear Signature</button></div>
+</div>
+</div>
+<div class="form-card"><h2>Save, Print, or Download</h2><div class="print-actions"><button onclick="savePacket()" type="button">Save Progress</button><button onclick="downloadJSON()" type="button">Download Responses</button><button class="alt" onclick="printPacket()" type="button">Print Packet</button><a class="btn btn-primary" href="index.html" style="text-decoration:none;">Return to Homepage</a></div></div></form></div>
+<script id="menu-behavior-restore">
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.getElementById('menuToggle');
+  var menu = document.getElementById('mobileMenu');

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Digital Intake Packet | Altamonte Medical Associates</title><link href="styles.css" rel="stylesheet"/><script defer="" src="script.js"></script>
+<style id="restored-working-menu-style">
+.topbar{position:sticky;top:0;z-index:2000;}
+.brand{position:relative;}
+#menuToggle,
+.menu-toggle{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-width:94px !important;
+  height:56px !important;
+  margin-left:18px !important;
+  margin-right:6px !important;
+  padding:0 18px !important;
+  border-radius:18px !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  background:#123a38 !important;
+  color:#ffffff !important;
+  font-family:Arial,sans-serif !important;
+  font-size:18px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  box-shadow:0 10px 22px rgba(16,24,40,.08) !important;
+  cursor:pointer !important;
+  flex:0 0 auto !important;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease !important;
+  position:relative !important;
+  right:auto !important;
+  z-index:2101 !important;
+}
+#menuToggle:hover,
+.menu-toggle:hover{
+  transform:translateY(-2px) !important;
+  box-shadow:0 10px 24px rgba(16,24,40,.10) !important;
+  background:#184744 !important;
+}
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  left:auto !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+  opacity:0 !important;
+  transform:translateY(-8px) !important;
+  pointer-events:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+}
+.mobile-menu.open{
+  display:block !important;
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+.mobile-menu-panel{
+  width:100% !important;
+  margin-left:auto !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  background:#fffdf9 !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+  box-shadow:0 18px 38px rgba(16,24,40,.14) !important;
+}
+.mobile-menu-links a,
+.mobile-menu-links a:visited,
+.mobile-menu-links a:hover,
+.mobile-menu-links a:active,
+.mobile-menu-links a:focus{
+  display:block !important;
+  color:#123a38 !important;
+  text-decoration:none !important;
+  font-family:Arial,sans-serif !important;
+  font-size:14px !important;
+  font-weight:700 !important;
+  background:#fffdf9 !important;
+  border-bottom:1px solid rgba(18,58,56,.07) !important;
+  padding:12px 14px !important;
+}
+.mobile-menu-links a:hover{
+  background:#f4efe5 !important;
+}
+.mobile-menu-cta{
+  display:grid !important;
+  gap:8px !important;
+  padding:12px !important;
+  background:#fbf8f2 !important;
+}
+.call-dark{
+  background:#123a38 !important;
+  color:#fff !important;
+  border:1px solid rgba(18,58,56,.10) !important;
+}
+@media (max-width:760px){
+  .wrap{padding:0 16px !important;}
+  #menuToggle,
+  .menu-toggle{
+    margin-right:0 !important;
+    min-width:88px !important;
+    height:52px !important;
+    font-size:17px !important;
+  }
+  .mobile-menu{
+    top:88px !important;
+    right:12px !important;
+    width:min(250px, calc(100vw - 24px)) !important;
+  }
+}
+</style>
+<style id="menu-open-visibility-fix">
+.mobile-menu{
+  display:none !important;
+  position:fixed !important;
+  top:96px !important;
+  right:16px !important;
+  left:auto !important;
+  width:min(270px, calc(100vw - 32px)) !important;
+  z-index:2100 !important;
+  opacity:0 !important;
+  transform:translateY(-8px) !important;
+  pointer-events:none !important;
+  transition:opacity .22s ease, transform .22s ease !important;
+}
+.mobile-menu.open{
+  display:block !important;
+  opacity:1 !important;
+  transform:translateY(0) !important;
+  pointer-events:auto !important;
+}
+@media (max-width:760px){
+  .mobile-menu{
+    top:88px !important;
+    right:12px !important;
+    width:min(250px, calc(100vw - 24px)) !important;
+  }
+}
+</style>
+<style id="mobile-header-size-fix">
+@media (max-width:760px){
+  .topbar{
+    position:sticky !important;
+    top:0 !important;
+    z-index:2000 !important;
+  }
+  .wrap{
+    padding:0 14px !important;
+  }
+  .brand{
+    gap:10px !important;
+    padding:12px 0 !important;
+    align-items:center !important;
+  }
+  .brand-left{
+    gap:10px !important;
+    min-width:0 !important;
+    flex:1 1 auto !important;
+    align-items:center !important;
+  }
+  .site-logo,
+  .logo,
+  .brand-left img{
+    width:56px !important;
+    height:56px !important;
+    max-width:56px !important;
+    max-height:56px !important;
+    flex:0 0 56px !important;
+  }
+  .kicker{
+    font-size:9px !important;
+    letter-spacing:.12em !important;
+    line-height:1.2 !important;
+  }
+  .name{
+    font-size:24px !important;
+    line-height:.95 !important;
+    margin-top:4px !important;
+  }
+  .line{
+    display:none !important;
+  }
+  #menuToggle,
+  .menu-toggle{
+    min-width:74px !important;
+    height:42px !important;
+    margin-left:8px !important;
+    margin-right:0 !important;
+    padding:0 12px !important;
+    font-size:14px !important;
+    border-radius:12px !important;
+    position:relative !important;
+    right:auto !important;
+    top:auto !important;
+    flex:0 0 auto !important;
+  }
+  .mobile-menu{
+    top:72px !important;
+    right:10px !important;
+    width:min(238px, calc(100vw - 20px)) !important;
+  }
+}
+</style>
+<style id="menu-mobile-nudge">
+@media (max-width:760px){
+  #menuToggle,
+  .menu-toggle{
+    margin-right:4px !important;
+    transform:translateX(-4px) !important;
+  }
+}
+</style>
+<style id="global-menu-nudge">
+#menuToggle,
+.menu-toggle{
+  transform:translateX(-6px) !important;
+}
+@media (max-width:760px){
+  #menuToggle,
+  .menu-toggle{
+    transform:translateX(-8px) !important;
